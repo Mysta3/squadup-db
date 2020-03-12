@@ -24,7 +24,7 @@ SECRET_KEY = '3mvmb442xaon=7!$(tmj3kh-0v_icm)7m9#wwerbvge7lg8w(k'
 # SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', 'https://squadup-db.herokuapp.com/']
 
