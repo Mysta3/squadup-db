@@ -8,12 +8,16 @@ verify_ssl = true
 [packages]
 django = "*"
 psycopg2-binary = "*"
+djangorestframework = "*"
 django-cors-headers = "*"
 gunicorn = "*"
 whitenoise = "*"
 dj-database-url = "*"
-django-heroku = "*"
 python-decouple = "*"
+pillow = "*"
+djangorestframework-jwt = "*"
+social-auth-app-django = "*"
+django-heroku = "*"
 
 [requires]
 python_version = "3.7"
