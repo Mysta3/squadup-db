@@ -71,6 +71,10 @@ REST_FRAMEWORK = {
 
 CORS_ORIGIN_ALLOW_ALL = True
 
+JWT_AUTH = {
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'squadup_django.utils.my_jwt_response_handler'
+}
+
 ROOT_URLCONF = 'squadup_django.urls'
 
 TEMPLATES = [
