@@ -58,6 +58,17 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+}
+
 CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'squadup_django.urls'
@@ -88,7 +99,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'squadup',
-        'USER': 'squadupuser' ,
+        'USER': 'squadupuser',
         'PASSWORD': 'squadup',
         'HOST': 'localhost'
     }
