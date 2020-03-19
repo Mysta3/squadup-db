@@ -31,7 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', 'squadup-db.herokuapp.com']
 
-
+CORS_ORIGIN_ALLOW_ALL = True
 # Application definition
 
 INSTALLED_APPS = [
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'squadup',
     'rest_framework',
+    'rest_framework.authtoken',
     'corsheaders'
 ]
 
@@ -69,11 +70,15 @@ REST_FRAMEWORK = {
     ),
 }
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:3000',
+)
+
 
 JWT_AUTH = {
     'JWT_RESPONSE_PAYLOAD_HANDLER': 'squadup_django.utils.my_jwt_response_handler'
 }
+
 
 ROOT_URLCONF = 'squadup_django.urls'
 
